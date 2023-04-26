@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'kanban';
+  clicked = false;
+
+  products = [
+    {
+      name: 'Iphone',
+      price: 999 
+    },
+    {
+      name: 'IMac',
+      price: 1499
+    }
+  ]
+  
 }
