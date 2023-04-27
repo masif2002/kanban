@@ -9,12 +9,13 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { environment } from 'src/environments/environment';
 
 // Firebase Imports
-// import { AngularFireModule } from '@angular/fire/compat' 
+import { AngularFireModule } from '@angular/fire/compat' 
 // import { AngularFirestoreModule } from '@angular/fire/compat/firestore' 
-// import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore' 
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+
+// import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+// import { provideAuth,getAuth } from '@angular/fire/auth';
+// import { provideFirestore,getFirestore } from '@angular/fire/firestore' 
 
 
 @NgModule({
@@ -27,12 +28,12 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore'
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    // AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebase),
     // AngularFirestoreModule,
-    // AngularFireAuthModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore())
+    AngularFireAuthModule,
+    // provideFirebaseApp(() => initializeApp(environment.firebase)),
+    // provideAuth(() => getAuth()),
+    // provideFirestore(() => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]
