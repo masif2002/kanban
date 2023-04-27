@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "kanban-2ce79": {
+      "hosting": {
+        "kanban": [
+          "kanban-asif"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "kanban-2ce79"
+  }
+}
