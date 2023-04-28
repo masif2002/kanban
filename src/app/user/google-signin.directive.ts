@@ -11,7 +11,6 @@ export class GoogleSigninDirective {
   @HostListener('click')
   onclick() {
     this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-    // console.log('hello');
     
   }
 }

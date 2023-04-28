@@ -4,16 +4,23 @@ import { CommonModule } from '@angular/common';
 import { UserRoutingModule } from './user-routing.module';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { GoogleSigninDirective } from './google-signin.directive';
+import { SharedModule } from '../shared/shared.module';
+import { EmailLoginComponent } from './email-login/email-login.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     LoginPageComponent,
-    GoogleSigninDirective
+    GoogleSigninDirective,
+    EmailLoginComponent,
   ],
+  // exports: [GoogleSigninDirective],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+    SharedModule,
+    ReactiveFormsModule,
   ]
 })
 export class UserModule { }

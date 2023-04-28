@@ -13,20 +13,20 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $custom-purple: (
-  50 : #e8eaf6,
-  100 : #c5cae9,
-  200 : #9fa8da,
-  300 : #7986cb,
-  400 : #5c6bc0,
-  500 : #3f51b5,
-  600 : #3949ab,
-  700 : #303f9f,
-  800 : #283593,
-  900 : #1a237e,
-  A100 : #8c9eff,
-  A200 : #536dfe,
-  A400 : #3d5afe,
-  A700 : #304ffe,
+  50: #fff3e0,
+  100: #ffe0b2,
+  200: #ffcc80,
+  300: #ffb74d,
+  400: #ffa726,
+  500: #ff9800,
+  600: #fb8c00,
+  700: #f57c00,
+  800: #ef6c00,
+  900: #e65100,
+  A100: #ffd180,
+  A200: #ffab40,
+  A400: #ff9100,
+  A700: #ff6d00,
   contrast: (
       50 : #000000,
       100 : #000000,
@@ -46,7 +46,7 @@ $custom-purple: (
 );
 
 $kanban-primary: mat.define-palette($custom-purple);
-$kanban-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$kanban-accent: mat.define-palette(mat.$green-palette, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $kanban-warn: mat.define-palette(mat.$red-palette);
