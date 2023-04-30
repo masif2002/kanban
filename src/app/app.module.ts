@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 
 // Firebase Imports
 import { AngularFireModule } from '@angular/fire/compat' 
-// import { AngularFirestoreModule } from '@angular/fire/compat/firestore' 
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore' 
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 // import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
@@ -29,7 +29,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     BrowserAnimationsModule,
     SharedModule,
     AngularFireModule.initializeApp(environment.firebase),
-    // AngularFirestoreModule,
+    AngularFirestoreModule,
     AngularFireAuthModule,
     // provideFirebaseApp(() => initializeApp(environment.firebase)),
     // provideAuth(() => getAuth()),
