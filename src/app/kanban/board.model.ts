@@ -1,8 +1,8 @@
 export interface Board {
-    id?: string
+    id: string
     title?: string
     priority?: number
-    tasks?: Task[]
+    tasks: Task[]
 
 }
 
