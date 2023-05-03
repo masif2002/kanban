@@ -15,7 +15,7 @@ export class BoardService {
   constructor(private afAuth: AngularFireAuth, private db: AngularFirestore) { }
 
   // Creates a board for the current user
-  async createBoard(data: Board) {
+  async createBoard(data: any) {
     const user = await this.afAuth.currentUser;
 
     return this.db.collection('boards').add({
@@ -40,13 +40,13 @@ export class BoardService {
   }
 
   // Remove a specific task on board
-  // removeTask(boardId: string, task: Task) {
-  //   return this.db.collection('boards')
-  //     .doc(boardId)
-  //     .update({
-  //       tasks: firebase.firestore.FieldValue.arrayRemove(task) // Only removes the task that is missing
-  //     })
-  // }
+  removeTask(boardId: string, task: Task) {
+    return this.db.collection('boards')
+      .doc(boardId)
+      .update({
+        tasks: firebase.firestore.FieldValue.arrayRemove(task) // Only removes the task that is missing
+      })
+  }
 
   // Get all boards owned by the current user
   getUserBoards() {
