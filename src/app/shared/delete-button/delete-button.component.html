@@ -1,0 +1,24 @@
+<div class="container">
+    <button
+    mat-stroked-button
+    color="warn"
+    (click)="canDelete ? deleteBoard() : prepareForDelete()"
+    [ngClass]="{
+        'delete': !canDelete,
+        'confirm': canDelete 
+    }"
+
+>
+    <mat-icon>delete</mat-icon>
+    <span *ngIf="canDelete" class="confirm">Confirm</span>
+</button>
+
+<button
+    *ngIf="canDelete"
+    mat-button
+    (click)="cancel()"
+    class="confirm"
+>
+    Cancel
+</button>
+</div>
