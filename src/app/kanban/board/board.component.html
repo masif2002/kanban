@@ -1,8 +1,7 @@
 <mat-card class="outer-card">
     
     <mat-card-header>
-        <!-- The drag icon -->
-        <ng-content></ng-content>
+        <ng-content><!-- The drag icon --></ng-content>
         <mat-card-title>
             {{ board.title }}
         </mat-card-title>
@@ -23,7 +22,12 @@
             *ngFor="let task of board.tasks; let i = index"
             (click) = "openDialog(task, i)"
         >
-            <mat-card [ngClass]="task.label"> {{ task.description }} </mat-card>
+            <mat-card
+                class="task" 
+                [ngClass]="task.label"> 
+                
+                {{ task.description }} 
+            </mat-card>
         </div>
     </div>
 

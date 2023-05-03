@@ -36,12 +36,11 @@ import { BoardService } from '../board.service';
       </button>
     </div>
   `,
-  styles: [
-  ]
+  styleUrls: ['./dialog.scss']
 })
 export class TaskDialogComponent {
 
-  labelOptions = ['puple', 'blue', 'green', 'yellow', 'red', 'gray']
+  labelOptions = ['purple', 'blue', 'green', 'yellow', 'red', 'gray']
 
   constructor (
     public dialogRef: MatDialogRef<TaskDialogComponent>,
