@@ -27,15 +27,20 @@
   padding: 10px
 }
 
-
 .cdk-drag-placeholder {
 opacity: 0.5;
+}
+
+button {
+  .mat-icon {
+      margin: 0px
+  }
 }
 
 .blue { background: #71deff; color: black; }
 .green { background: #36e9b6; color: black;  }
 .yellow { background: #ffcf44; color: black; }
 .purple { background: #b15cff; }
-.red { background: #e74a4a; color: white }
+.red { background: #e74a4a; color: white   }
 
 .gray { background: gray; text-decoration: line-through; }
