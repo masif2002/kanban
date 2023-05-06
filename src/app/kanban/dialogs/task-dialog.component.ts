@@ -37,6 +37,7 @@ import { BoardService } from '../board.service';
       </button>
 
       <app-delete-button
+        *ngIf="!data.isNew"
         (delete)="handleTaskDelete()"
       >
       </app-delete-button>

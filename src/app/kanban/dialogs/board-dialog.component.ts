@@ -14,13 +14,13 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
         </mat-form-field>
     </div>
 
-    <div mat-dialog-actions>
-      <button mat-button (click)="onNoClick()"> Cancel </button>
-      <button mat-button [mat-dialog-close]="data.title" cdkFocusInitial> Create </button>
+    <div mat-dialog-actions class="btn-container">
+      <button mat-stroked-button (click)="onNoClick()"> Cancel </button>
+      <button mat-raised-button color="accent" [mat-dialog-close]="data.title" cdkFocusInitial> Create </button>
     </div>
   `,
-  styles: [
-  ]
+  styleUrls: ['./dialog.scss']
+
 })
 export class BoardDialogComponent {
   constructor (

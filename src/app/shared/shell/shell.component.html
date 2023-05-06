@@ -11,8 +11,8 @@
        
         <a mat-list-item routerLink="/" (click)="drawer.close()">Home</a>
         <a mat-list-item routerLink="/login" (click)="drawer.close()">Login</a>
-        <a mat-list-item routerLink="/kanban" (click)="drawer.close()">Kanban Demo</a>
-        <a mat-list-item routerLink="/customers" (click)="drawer.close()">SSR Demo</a>
+        <a mat-list-item routerLink="/kanban" (click)="drawer.close()">Kanban</a>
+        <a mat-list-item href="https://ssr-with-angular.web.app/"  target="_blank" (click)="drawer.close()">SSR</a>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
@@ -30,14 +30,17 @@
   
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
-        <span class="logo" routerLink="/">🔥 Angular Firestarter</span>
+        <h1 class="logo" routerLink="/">🔥 Kanban 🔥</h1>
   
         <span class="fill-space"></span>
         <div *ngIf="!(isHandset$ | async)">
-          <a mat-button routerLink="/kanban">🍱 Kanban Demo</a>
-          <a mat-button routerLink="/customers">⚡ SSR Demo</a>
+          <a mat-button routerLink="/kanban">🍱 Kanban </a>
+          <a mat-button href="https://ssr-with-angular.web.app/"  target="_blank">⚡ SSR </a>
   
-          <a mat-button routerLink="/login">🔑 Login</a>
+          <a mat-button routerLink="/login"  *ngIf="!(afAuth.authState | async)">🔑 Login</a>
+          <a mat-button routerLink="/login" *ngIf="afAuth.authState | async as user" class="profile" >
+            👤 Profile
+          </a>
   
         </div>
   
