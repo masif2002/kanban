@@ -16,7 +16,6 @@ export class AuthGuard {
     
       
       const user = await this.afAuth.currentUser
-      console.log(user);
       
       const isLoggedIn = !!user
 
