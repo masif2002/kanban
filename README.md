@@ -1,5 +1,10 @@
-# Kanban
+# Kanban Board
 A fully featured custom Kanban [app](https://kanban-asif.web.app/) built on **Angular**. 
+
+
+https://user-images.githubusercontent.com/94846379/236663624-efeeeadb-655a-4af5-b736-26054ba732e6.mp4
+
+
 ### Dev Stack
 * Authentication and Hosting with **Firebase**
 * **Firestore** for storing kanban boards
